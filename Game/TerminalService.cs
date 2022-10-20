@@ -3,13 +3,15 @@ using System;
 namespace Unit3.Game
 {
     /// <summary>
-
+    /// <para>A service that handles terminal operations.</para>
+    /// <para>
+    /// The reponsibility of a TerminalService is to provide input and output operations for the terminal.
+    /// </para>
     /// </summary>
-
     public class TerminalService
     {
         /// <summary>
-
+        /// Constructs a new instance of TerminalService
         /// </summary>
         public TerminalService()
         {

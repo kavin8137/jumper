@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Unit3.Game
 {
+    /// <summary>
+    /// The responsibility of Words is to track the answer and the guessed letter from the user.
+    /// </summary>
     public class Words
     {
         TerminalService _terminalService = new TerminalService();
@@ -13,6 +16,9 @@ namespace Unit3.Game
         int _value;
         int _length;
 
+        /// <summary>
+        /// Constructs an instance of Words.
+        /// </summary>
         public Words()
         {
             setAnswer();
@@ -20,6 +26,9 @@ namespace Unit3.Game
             getWord();
         }
 
+        /// <summary>
+        /// Set the hint list to the number of letter from _answer.
+        /// </summary>
         private void getWord()
         {
             _length = _answer.Length;
@@ -30,6 +39,9 @@ namespace Unit3.Game
             }
         }
 
+        /// <summary>
+        /// Set the answer list from the _answer variable.
+        /// </summary>
         private void getAnswer()
         {
             char[] wordList = _answer.ToCharArray();
@@ -40,6 +52,9 @@ namespace Unit3.Game
             }
         }
 
+        /// <summary>
+        /// Set the answer from one of the word in the _words list.
+        /// </summary>
         private void setAnswer()
         {
             int number = _words.Count();
@@ -48,6 +63,9 @@ namespace Unit3.Game
             _answer = _words[_value];
         }
 
+        /// <summary>
+        /// Pressenting the hint to the user when it is called.
+        /// </summary>
         public void showWord()
         {
             foreach(string letter in _word)
@@ -56,6 +74,9 @@ namespace Unit3.Game
             }
         }
 
+        /// <summary>
+        /// Presenting the answer to the user when it is called.
+        /// </summary>
         public void showAnswer()
         {
             foreach(string letter in _wordList)
@@ -64,17 +85,27 @@ namespace Unit3.Game
             }
         }
 
+
+        /// <summary>
+        /// Passing the _wordList variable when it is called.
+        /// </summary>
         public List<string> passAnswer()
         {
             return _wordList;
 
         }
 
+        /// <summary>
+        /// Passing the _word variable when it is called.
+        /// </summary>
         public List<string> passWord()
         {
             return _word;
         }
 
+        /// <summary>
+        /// Passing the _length variable when it is called. 
+        /// </summary>
         public int passLength()
         {
             return _length;

@@ -4,7 +4,10 @@ using System.Collections.Generic;
 namespace Unit3.Game
 {
     /// <summary>
-
+    /// <para>The portion of displaying hangman to the user. </para>
+    /// <para>
+    /// The responsibility of Hangman is to keep track of the hangman each time when the user input a guess.
+    /// </para>
     /// </summary>
     public class Hangman
     {
@@ -13,13 +16,16 @@ namespace Unit3.Game
         TerminalService _terminalService = new TerminalService();
 
         /// <summary>
-
+        /// Constructs a new instance of Hangman.
         /// </summary>
         public Hangman()
         {
             setHangman();
         }
 
+        /// <summary>
+        /// Elements of hangman has been added to the list.
+        /// </summary>
         public void setHangman()
         {
             _hangman.Add(" -----");
@@ -35,11 +41,17 @@ namespace Unit3.Game
             _hangman.Add("^^^^^^^^");
         }
 
+        /// <summary>
+        /// When the end game condition is med, the hangman head will be changed to an "x".
+        /// </summary>
         public void setGameHangman()
         {
             _hangman[5] = "   x   ";
         }
 
+        /// <summary>
+        /// Print the hangman to the user.
+        /// </summary>
         public void showHangman(int index)
         {
             _length = _hangman.Count();

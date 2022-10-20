@@ -1,7 +1,10 @@
 namespace Unit3.Game
 {
     /// <summary>
-
+    /// <para>A person who directs the game.</para>
+    /// <para>
+    /// The responsibility of a Director is to control the sequence of play.
+    /// </para>
     ///</summary>
     public class Director
     {
@@ -17,7 +20,7 @@ namespace Unit3.Game
         private TerminalService _terminalService = new TerminalService();
 
         ///<summary>
-
+        /// Constructs a new instance of Director.
         ///</summary>
         public Director()
         {
@@ -30,7 +33,7 @@ namespace Unit3.Game
         }
 
         /// <summary>
-
+        /// Starts the game by running the main game loop.
         /// </summary>
         public void StartGame()
         {
@@ -44,7 +47,7 @@ namespace Unit3.Game
         }
 
         /// <summary>
-
+        /// Get input from the user for guessing the letter.
         /// </summary>
         private void GetInPuts()
         {
@@ -53,7 +56,9 @@ namespace Unit3.Game
         }
 
         /// <summary>
-
+        /// Compare the input from the unser with the answer.
+        /// If the guessed letter is one of the letter in answer, the list will adjust to the word accordingly.
+        /// If the guessed letter is not one of the letter in answer, the hangman list will cancel by one index.
         /// </summary>
         private void DoUpDates()
         {
@@ -67,10 +72,6 @@ namespace Unit3.Game
             if (!_answer.Contains(_guess))
             {
                 _index += 1;
-            }
-            else
-            {
-
             }
             
             if (_word.Contains("_"))
@@ -91,7 +92,7 @@ namespace Unit3.Game
         }
 
         /// <summary>
-
+        /// Display both the hint and hangman to the user.
         /// </summary>
         private void DoOutPuts()
         {
@@ -109,6 +110,9 @@ namespace Unit3.Game
             }
         }
 
+        /// <summary>
+        /// If one of the end game condition is met, the game will ends by showing the final answer and greetings.
+        /// </summary>
         private void showResult()
         {
             if (_isWinner)
@@ -127,10 +131,6 @@ namespace Unit3.Game
                 _terminalService.WriteText(" \n");
                 _hangman.showHangman(_index);
                 _terminalService.WriteText("Unfortunity, you have finished all your chance! \n");
-            }
-            else
-            {
-
             }
         }
     }
