@@ -9,12 +9,12 @@ namespace Unit3.Game
     public class Words
     {
         TerminalService _terminalService = new TerminalService();
-        List<string> _word = new List<string>();
-        List<string> _wordList = new List<string>();
-        List<string> _words = new List<string>(){"apple","orrange","strawberry"};
-        string _answer = "";
-        int _value;
-        int _length;
+        private List<string> _word = new List<string>();
+        private List<string> _wordList = new List<string>();
+        private List<string> _words = new List<string>(){"apple","orrange","strawberry"};
+        private string _answer = "";
+        private int _value;
+        private int _length;
 
         /// <summary>
         /// Constructs an instance of Words.

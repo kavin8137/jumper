@@ -11,8 +11,8 @@ namespace Unit3.Game
     /// </summary>
     public class Hangman
     {
-        List<string> _hangman = new List<string>();
-        int _length;
+        private List<string> _hangman = new List<string>();
+        private int _length;
         TerminalService _terminalService = new TerminalService();
 
         /// <summary>
