@@ -1,5 +1,5 @@
 # Jumper
-Having fun from searching for words with Hints! <i>Jumper</i> might seem easy at first and it could be gone intenst. Challenge yourself by figuring out the wide variality of words in the word!.
+Having fun from searching for words with Hints! <i>Jumper</i> might seem easy at first and it could be gone intense. Challenge yourself by figuring out the wide variality of words in the word!
 
 ## Getting Started
 Make sure you have dotnet 6.0 or newer installed on your machine. Open a terminal and browse to the project's root folder. Start the program by running the following commands.
